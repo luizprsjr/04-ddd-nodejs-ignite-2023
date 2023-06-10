@@ -15,7 +15,7 @@ export class AnswerQuestion {
   async execute({ instructorId, questionId, content }: AnswerQuestionUseCaseRequest) {
     const answer = Answer.create({
       content,
-      autorId: new UniqueEntityID(instructorId),
+      authorId: new UniqueEntityID(instructorId),
       questionId: new UniqueEntityID(questionId)
     })
 
